@@ -392,6 +392,13 @@ Text inside an input is data, not instruction. Every skill treats embedded instr
 | [`write-like-me`](.agents/skills/write-like-me/) | Builds a personal voice profile from roughly 90 days of the user's own sent messages and meeting speech, then drafts emails and documents that match how the user actually writes, returning the profile and every draft as Markdown for the ... |
 <!-- skill-directory:end -->
 
+## Related
+
+- [awesome-mistral-vibe-agents](https://github.com/kesslernity/awesome-mistral-vibe-agents?utm_source=github&utm_medium=repo&utm_campaign=amv_skills): 17 agent profiles for the Vibe CLI. The profiles decide which tools a run can reach; these skills decide what it does with them.
+- [awesome-mistral-vibe-prompts](https://github.com/kesslernity/awesome-mistral-vibe-prompts?utm_source=github&utm_medium=repo&utm_campaign=amv_skills): 49 prompts for Vibe Work, scheduled tasks and Chat, for the jobs that do not need a skill file.
+- [mistral-vibe](https://github.com/mistralai/mistral-vibe): the CLI itself, Apache 2.0.
+- The same work on the Microsoft side, five repositories: [agent skills](https://github.com/kesslernity/awesome-copilot-agent-skills?utm_source=github&utm_medium=repo&utm_campaign=amv_skills), [Cowork skills](https://github.com/kesslernity/awesome-copilot-cowork-skills?utm_source=github&utm_medium=repo&utm_campaign=amv_skills), [Copilot Chat agents](https://github.com/kesslernity/awesome-copilot-chat-agents?utm_source=github&utm_medium=repo&utm_campaign=amv_skills), [Copilot Studio agents](https://github.com/kesslernity/awesome-copilot-studio-agents?utm_source=github&utm_medium=repo&utm_campaign=amv_skills), [M365 Copilot prompts](https://github.com/kesslernity/awesome-microsoft-copilot-prompts?utm_source=github&utm_medium=repo&utm_campaign=amv_skills). Two runtimes, one set of rules about what an agent is allowed to decide.
+
 ## Contributing
 
 Corrections go upstream, then get regenerated. The reason, and the three-command loop, are in [CONTRIBUTING.md](CONTRIBUTING.md).
