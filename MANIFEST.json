@@ -1,0 +1,1765 @@
+{
+ "generated_from": {
+  "repository": "kesslernity/awesome-copilot-agent-skills",
+  "path": "/Users/mathieukessler/Desktop/kesslernity/awesome-copilot-agent-skills",
+  "commit": "2af8b385063ef82e7a2a38e064435e18e0b9f27a"
+ },
+ "generator": "tools/generate.py",
+ "term_map": {
+  "a declarative agent": "an agent",
+  "declarative agents": "agents",
+  "declarative agent": "agent"
+ },
+ "skill_count": 137,
+ "skills": [
+  {
+   "name": "access-review-pack",
+   "source": "skills/it-operations/access-review-pack",
+   "category": "it-operations",
+   "description_chars": 722,
+   "headroom": 302,
+   "reference_files": [
+    "references/anomaly-flags.md",
+    "references/owner-covering-note.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "6c14a21a5a8b347b"
+  },
+  {
+   "name": "account-plan-builder",
+   "source": "skills/sales-bd/account-plan-builder",
+   "category": "sales-bd",
+   "description_chars": 732,
+   "headroom": 292,
+   "reference_files": [
+    "references/account-plan-template.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "92d8ccf8521195c8"
+  },
+  {
+   "name": "agent-evaluation-plan",
+   "source": "skills/meta-skills/agent-evaluation-plan",
+   "category": "meta-skills",
+   "description_chars": 918,
+   "headroom": 106,
+   "reference_files": [
+    "references/scenario-families.md"
+   ],
+   "terms_rewritten": [
+    "a declarative agent"
+   ],
+   "overridden": [],
+   "sha256": "f2376854483ca779"
+  },
+  {
+   "name": "agent-instructions-drafter",
+   "source": "skills/meta-skills/agent-instructions-drafter",
+   "category": "meta-skills",
+   "description_chars": 908,
+   "headroom": 116,
+   "reference_files": [
+    "references/global-rules-block.md",
+    "references/instructions-skeleton.md"
+   ],
+   "terms_rewritten": [
+    "a declarative agent"
+   ],
+   "overridden": [],
+   "sha256": "9b3f92caf01f92f0"
+  },
+  {
+   "name": "agent-instructions-red-team",
+   "source": "skills/meta-skills/agent-instructions-red-team",
+   "category": "meta-skills",
+   "description_chars": 845,
+   "headroom": 179,
+   "reference_files": [
+    "references/exposure-families.md"
+   ],
+   "terms_rewritten": [
+    "a declarative agent"
+   ],
+   "overridden": [],
+   "sha256": "4afec6910af2356f"
+  },
+  {
+   "name": "announcement-drafter",
+   "source": "skills/marketing-communications/announcement-drafter",
+   "category": "marketing-communications",
+   "description_chars": 753,
+   "headroom": 271,
+   "reference_files": [
+    "references/announcement-structures-and-approval-checklist.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "65c3340ea25410bf"
+  },
+  {
+   "name": "architecture-decision-record",
+   "source": "skills/executive/architecture-decision-record",
+   "category": "executive",
+   "description_chars": 896,
+   "headroom": 128,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "ed7801e2950a77df"
+  },
+  {
+   "name": "audit-prep-pack",
+   "source": "skills/quality-audit/audit-prep-pack",
+   "category": "quality-audit",
+   "description_chars": 806,
+   "headroom": 218,
+   "reference_files": [
+    "references/audit-pack-structure.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "edf623b354702dc9"
+  },
+  {
+   "name": "board-paper-skeleton",
+   "source": "skills/executive/board-paper-skeleton",
+   "category": "executive",
+   "description_chars": 799,
+   "headroom": 225,
+   "reference_files": [
+    "references/board-paper-structure.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "326df69431794773"
+  },
+  {
+   "name": "branded-deck-builder",
+   "source": "skills/writing-communication/branded-deck-builder",
+   "category": "writing-communication",
+   "description_chars": 725,
+   "headroom": 299,
+   "reference_files": [
+    "references/brand-rules-template.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "5ceb520e12811ef5"
+  },
+  {
+   "name": "budget-variance-explainer",
+   "source": "skills/finance/budget-variance-explainer",
+   "category": "finance",
+   "description_chars": 799,
+   "headroom": 225,
+   "reference_files": [
+    "references/variance-hypothesis-families.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "411bed0b775ba4c6"
+  },
+  {
+   "name": "campaign-brief-builder",
+   "source": "skills/marketing-communications/campaign-brief-builder",
+   "category": "marketing-communications",
+   "description_chars": 842,
+   "headroom": 182,
+   "reference_files": [
+    "references/brief-template-and-measure-guide.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "a9b2ea3100de3109"
+  },
+  {
+   "name": "capex-request-pack",
+   "source": "skills/finance/capex-request-pack",
+   "category": "finance",
+   "description_chars": 819,
+   "headroom": 205,
+   "reference_files": [
+    "references/capex-pack-structure.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "f35137837133718e"
+  },
+  {
+   "name": "case-study-drafter",
+   "source": "skills/marketing-communications/case-study-drafter",
+   "category": "marketing-communications",
+   "description_chars": 934,
+   "headroom": 90,
+   "reference_files": [
+    "references/confidentiality-checklist.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "5a275db66c574fb7"
+  },
+  {
+   "name": "cash-forecast-assumptions-sheet",
+   "source": "skills/finance/cash-forecast-assumptions-sheet",
+   "category": "finance",
+   "description_chars": 987,
+   "headroom": 37,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "78331dd7e10feb4c"
+  },
+  {
+   "name": "cbo-reviewer",
+   "source": "skills/executive-review/cbo-reviewer",
+   "category": "executive-review",
+   "description_chars": 664,
+   "headroom": 360,
+   "reference_files": [
+    "references/org-profile-template.md",
+    "references/persona.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "8b23ea6648929f18"
+  },
+  {
+   "name": "cdo-reviewer",
+   "source": "skills/executive-review/cdo-reviewer",
+   "category": "executive-review",
+   "description_chars": 740,
+   "headroom": 284,
+   "reference_files": [
+    "references/org-profile-template.md",
+    "references/persona.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "38747a16227d320b"
+  },
+  {
+   "name": "cfo-reviewer",
+   "source": "skills/executive-review/cfo-reviewer",
+   "category": "executive-review",
+   "description_chars": 729,
+   "headroom": 295,
+   "reference_files": [
+    "references/persona.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "914c62dad0e88e01"
+  },
+  {
+   "name": "change-communication-plan",
+   "source": "skills/hr-people/change-communication-plan",
+   "category": "hr-people",
+   "description_chars": 817,
+   "headroom": 207,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "be88b9c896eab2a7"
+  },
+  {
+   "name": "change-request-pack",
+   "source": "skills/it-operations/change-request-pack",
+   "category": "it-operations",
+   "description_chars": 790,
+   "headroom": 234,
+   "reference_files": [
+    "references/change-pack-fields.md",
+    "references/communications-templates.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "8011f820fa2a81c8"
+  },
+  {
+   "name": "chro-reviewer",
+   "source": "skills/executive-review/chro-reviewer",
+   "category": "executive-review",
+   "description_chars": 626,
+   "headroom": 398,
+   "reference_files": [
+    "references/org-profile-template.md",
+    "references/persona.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "83a64de810080621"
+  },
+  {
+   "name": "ciso-reviewer",
+   "source": "skills/executive-review/ciso-reviewer",
+   "category": "executive-review",
+   "description_chars": 629,
+   "headroom": 395,
+   "reference_files": [
+    "references/org-profile-template.md",
+    "references/persona.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "33fd546baeba2ad7"
+  },
+  {
+   "name": "claims-evidence-map",
+   "source": "skills/writing-communication/claims-evidence-map",
+   "category": "writing-communication",
+   "description_chars": 823,
+   "headroom": 201,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "ac724023b22c15a6"
+  },
+  {
+   "name": "clause-comparison-table",
+   "source": "skills/legal-contracts/clause-comparison-table",
+   "category": "legal-contracts",
+   "description_chars": 921,
+   "headroom": 103,
+   "reference_files": [
+    "references/clause-elements.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "ad0c7f2dab690dc0"
+  },
+  {
+   "name": "cmo-reviewer",
+   "source": "skills/executive-review/cmo-reviewer",
+   "category": "executive-review",
+   "description_chars": 645,
+   "headroom": 379,
+   "reference_files": [
+    "references/persona.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "6e33ea679d3ed506"
+  },
+  {
+   "name": "commitment-catcher",
+   "source": "skills/daily-briefings/commitment-catcher",
+   "category": "daily-briefings",
+   "description_chars": 678,
+   "headroom": 346,
+   "reference_files": [
+    "references/commitment-language.md",
+    "references/ledger-format.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "705a9c1e9c905f35"
+  },
+  {
+   "name": "communication-pretest-panel",
+   "source": "skills/marketing-communications/communication-pretest-panel",
+   "category": "marketing-communications",
+   "description_chars": 981,
+   "headroom": 43,
+   "reference_files": [
+    "references/persona-brief-template.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "b994f0ad31c3b497"
+  },
+  {
+   "name": "content-calendar-planner",
+   "source": "skills/marketing-communications/content-calendar-planner",
+   "category": "marketing-communications",
+   "description_chars": 802,
+   "headroom": 222,
+   "reference_files": [
+    "references/calendar-structure-and-cadence-checks.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "5f3c58ff4b971b90"
+  },
+  {
+   "name": "contract-renewal-radar",
+   "source": "skills/procurement/contract-renewal-radar",
+   "category": "procurement",
+   "description_chars": 718,
+   "headroom": 306,
+   "reference_files": [
+    "references/renewal-terms-and-urgency.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "ed75960680629f6d"
+  },
+  {
+   "name": "contract-review-pack",
+   "source": "skills/legal-contracts/contract-review-pack",
+   "category": "legal-contracts",
+   "description_chars": 768,
+   "headroom": 256,
+   "reference_files": [
+    "references/abstraction-fields.md",
+    "references/playbook-template.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "47fdd64df53457b2"
+  },
+  {
+   "name": "control-evidence-request-pack",
+   "source": "skills/security-grc/control-evidence-request-pack",
+   "category": "security-grc",
+   "description_chars": 789,
+   "headroom": 235,
+   "reference_files": [
+    "references/evidence-examples.md",
+    "references/request-pack-structure.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "f91cf3c945bc0957"
+  },
+  {
+   "name": "controls-gap-pack",
+   "source": "skills/risk-ethics-compliance/controls-gap-pack",
+   "category": "risk-ethics-compliance",
+   "description_chars": 804,
+   "headroom": 220,
+   "reference_files": [
+    "references/gap-pack-structure.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "72ffb9f2c1f24868"
+  },
+  {
+   "name": "coo-reviewer",
+   "source": "skills/executive-review/coo-reviewer",
+   "category": "executive-review",
+   "description_chars": 683,
+   "headroom": 341,
+   "reference_files": [
+    "references/persona.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "96f09ec0b1e3eef0"
+  },
+  {
+   "name": "corrective-action-tracker",
+   "source": "skills/quality-audit/corrective-action-tracker",
+   "category": "quality-audit",
+   "description_chars": 727,
+   "headroom": 297,
+   "reference_files": [
+    "references/tracker-fields-and-flags.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "56efcc1335c05b59"
+  },
+  {
+   "name": "course-outline-builder",
+   "source": "skills/learning-development/course-outline-builder",
+   "category": "learning-development",
+   "description_chars": 890,
+   "headroom": 134,
+   "reference_files": [
+    "references/objective-and-activity-defaults.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "b64918021fb0c93a"
+  },
+  {
+   "name": "cpo-reviewer",
+   "source": "skills/executive-review/cpo-reviewer",
+   "category": "executive-review",
+   "description_chars": 778,
+   "headroom": 246,
+   "reference_files": [
+    "references/org-profile-template.md",
+    "references/persona.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "df42ece089a7c465"
+  },
+  {
+   "name": "cro-reviewer",
+   "source": "skills/executive-review/cro-reviewer",
+   "category": "executive-review",
+   "description_chars": 662,
+   "headroom": 362,
+   "reference_files": [
+    "references/org-profile-template.md",
+    "references/persona.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "071abc7c836fbe00"
+  },
+  {
+   "name": "cto-reviewer",
+   "source": "skills/executive-review/cto-reviewer",
+   "category": "executive-review",
+   "description_chars": 809,
+   "headroom": 215,
+   "reference_files": [
+    "references/persona.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "c5710e5727bf8cca"
+  },
+  {
+   "name": "custom-daily-brief",
+   "source": "skills/daily-briefings/custom-daily-brief",
+   "category": "daily-briefings",
+   "description_chars": 632,
+   "headroom": 392,
+   "reference_files": [
+    "references/brief-config.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "ca09c08d57a33c18"
+  },
+  {
+   "name": "customer-advocate-reviewer",
+   "source": "skills/executive-review/customer-advocate-reviewer",
+   "category": "executive-review",
+   "description_chars": 788,
+   "headroom": 236,
+   "reference_files": [
+    "references/org-profile-template.md",
+    "references/persona.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "8bc6b8eafa01ad23"
+  },
+  {
+   "name": "customer-feedback-theme-synthesis",
+   "source": "skills/customer-support/customer-feedback-theme-synthesis",
+   "category": "customer-support",
+   "description_chars": 891,
+   "headroom": 133,
+   "reference_files": [
+    "references/theme-coding-defaults.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "47cfd7304af16231"
+  },
+  {
+   "name": "data-dictionary-builder",
+   "source": "skills/data-analytics/data-dictionary-builder",
+   "category": "data-analytics",
+   "description_chars": 883,
+   "headroom": 141,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "e84336cb921490bd"
+  },
+  {
+   "name": "data-incident-impact-brief",
+   "source": "skills/security-grc/data-incident-impact-brief",
+   "category": "security-grc",
+   "description_chars": 976,
+   "headroom": 48,
+   "reference_files": [
+    "references/data-categories.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "145b3215d306ffb6"
+  },
+  {
+   "name": "data-quality-issue-log",
+   "source": "skills/data-analytics/data-quality-issue-log",
+   "category": "data-analytics",
+   "description_chars": 898,
+   "headroom": 126,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "1b7c1c0f423ad037"
+  },
+  {
+   "name": "dataset-insight-pack",
+   "source": "skills/data-analytics/dataset-insight-pack",
+   "category": "data-analytics",
+   "description_chars": 847,
+   "headroom": 177,
+   "reference_files": [
+    "references/insight-pack-structure.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "ccae0d83570e8251"
+  },
+  {
+   "name": "deal-risk-review",
+   "source": "skills/sales-bd/deal-risk-review",
+   "category": "sales-bd",
+   "description_chars": 923,
+   "headroom": 101,
+   "reference_files": [
+    "references/risk-signal-catalogue.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "5d4437763f1b5f2d"
+  },
+  {
+   "name": "decision-memo-builder",
+   "source": "skills/executive/decision-memo-builder",
+   "category": "executive",
+   "description_chars": 777,
+   "headroom": 247,
+   "reference_files": [
+    "references/decision-memo-template.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "d3090466c974520f"
+  },
+  {
+   "name": "discovery-call-prep",
+   "source": "skills/sales-bd/discovery-call-prep",
+   "category": "sales-bd",
+   "description_chars": 774,
+   "headroom": 250,
+   "reference_files": [
+    "references/discovery-question-bank.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "69b363c7e374ed92"
+  },
+  {
+   "name": "document-accessibility-check",
+   "source": "skills/writing-communication/document-accessibility-check",
+   "category": "writing-communication",
+   "description_chars": 853,
+   "headroom": 171,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "5d61f81c35acd6dd"
+  },
+  {
+   "name": "document-deidentification-pass",
+   "source": "skills/data-privacy/document-deidentification-pass",
+   "category": "data-privacy",
+   "description_chars": 927,
+   "headroom": 97,
+   "reference_files": [
+    "references/identifier-categories.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "27f6958a21e08604"
+  },
+  {
+   "name": "dpia-draft-pack",
+   "source": "skills/data-privacy/dpia-draft-pack",
+   "category": "data-privacy",
+   "description_chars": 866,
+   "headroom": 158,
+   "reference_files": [
+    "references/dpia-structure.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "752a6c6b7a13c533"
+  },
+  {
+   "name": "escalation-summary",
+   "source": "skills/customer-support/escalation-summary",
+   "category": "customer-support",
+   "description_chars": 837,
+   "headroom": 187,
+   "reference_files": [
+    "references/summary-template.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "5d2613a54e8bf08a"
+  },
+  {
+   "name": "esg-report-question-pack",
+   "source": "skills/risk-ethics-compliance/esg-report-question-pack",
+   "category": "risk-ethics-compliance",
+   "description_chars": 891,
+   "headroom": 133,
+   "reference_files": [
+    "references/figure-topics-and-gap-types.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "d9cbebdf815055db"
+  },
+  {
+   "name": "estimate-to-sow",
+   "source": "skills/sales-bd/estimate-to-sow",
+   "category": "sales-bd",
+   "description_chars": 842,
+   "headroom": 182,
+   "reference_files": [
+    "references/sow-mapping-template.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "e11a81faa33ca3b3"
+  },
+  {
+   "name": "executive-briefing-pack",
+   "source": "skills/executive/executive-briefing-pack",
+   "category": "executive",
+   "description_chars": 900,
+   "headroom": 124,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "21f5ed0249a2bda7"
+  },
+  {
+   "name": "exit-interview-synthesis",
+   "source": "skills/hr-people/exit-interview-synthesis",
+   "category": "hr-people",
+   "description_chars": 829,
+   "headroom": 195,
+   "reference_files": [
+    "references/anonymisation-and-codebook.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "39cbbe502a4d55d6"
+  },
+  {
+   "name": "expense-policy-precheck",
+   "source": "skills/finance/expense-policy-precheck",
+   "category": "finance",
+   "description_chars": 986,
+   "headroom": 38,
+   "reference_files": [
+    "references/expense-check-catalogue.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "a17ce14b5a56d47d"
+  },
+  {
+   "name": "export-review-pack",
+   "source": "skills/trade-compliance/export-review-pack",
+   "category": "trade-compliance",
+   "description_chars": 831,
+   "headroom": 193,
+   "reference_files": [
+    "references/review-pack-structure.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "410a466ad31bb48f"
+  },
+  {
+   "name": "faq-builder",
+   "source": "skills/marketing-communications/faq-builder",
+   "category": "marketing-communications",
+   "description_chars": 954,
+   "headroom": 70,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "338e0b374f927532"
+  },
+  {
+   "name": "frontline-skeptic-reviewer",
+   "source": "skills/executive-review/frontline-skeptic-reviewer",
+   "category": "executive-review",
+   "description_chars": 799,
+   "headroom": 225,
+   "reference_files": [
+    "references/org-profile-template.md",
+    "references/persona.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "c19a30f32b106b3e"
+  },
+  {
+   "name": "general-counsel-reviewer",
+   "source": "skills/executive-review/general-counsel-reviewer",
+   "category": "executive-review",
+   "description_chars": 758,
+   "headroom": 266,
+   "reference_files": [
+    "references/org-profile-template.md",
+    "references/persona.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "cbef4448ddde2a91"
+  },
+  {
+   "name": "green-claims-review",
+   "source": "skills/risk-ethics-compliance/green-claims-review",
+   "category": "risk-ethics-compliance",
+   "description_chars": 962,
+   "headroom": 62,
+   "reference_files": [
+    "references/claim-families-and-observation-types.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "6cc3f71000310619"
+  },
+  {
+   "name": "impact-log-builder",
+   "source": "skills/hr-people/impact-log-builder",
+   "category": "hr-people",
+   "description_chars": 900,
+   "headroom": 124,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "69e3721deb8faae5"
+  },
+  {
+   "name": "inbox-triage",
+   "source": "skills/email-inbox/inbox-triage",
+   "category": "email-inbox",
+   "description_chars": 829,
+   "headroom": 195,
+   "reference_files": [
+    "references/output-format.md",
+    "references/triage-rules.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "95389cc106bbbadf"
+  },
+  {
+   "name": "incident-postmortem-drafter",
+   "source": "skills/it-operations/incident-postmortem-drafter",
+   "category": "it-operations",
+   "description_chars": 871,
+   "headroom": 153,
+   "reference_files": [
+    "references/blameless-language.md",
+    "references/postmortem-structure.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "842ce2398cf55a1b"
+  },
+  {
+   "name": "instrumentation-and-control-enrichment",
+   "source": "skills/engineering-pfd-to-pid/instrumentation-and-control-enrichment",
+   "category": "engineering-pfd-to-pid",
+   "description_chars": 859,
+   "headroom": 165,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "bbe35f28caac6991"
+  },
+  {
+   "name": "interface-register-builder",
+   "source": "skills/engineering-document-control/interface-register-builder",
+   "category": "engineering-document-control",
+   "description_chars": 938,
+   "headroom": 86,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "7148d6e2ede628d9"
+  },
+  {
+   "name": "internal-newsletter-drafter",
+   "source": "skills/marketing-communications/internal-newsletter-drafter",
+   "category": "marketing-communications",
+   "description_chars": 954,
+   "headroom": 70,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "2c093ae571ef36ec"
+  },
+  {
+   "name": "interview-scorecard-builder",
+   "source": "skills/hr-people/interview-scorecard-builder",
+   "category": "hr-people",
+   "description_chars": 842,
+   "headroom": 182,
+   "reference_files": [
+    "references/question-and-anchor-guide.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "68398eb524127ded"
+  },
+  {
+   "name": "investor-reviewer",
+   "source": "skills/executive-review/investor-reviewer",
+   "category": "executive-review",
+   "description_chars": 681,
+   "headroom": 343,
+   "reference_files": [
+    "references/org-profile-template.md",
+    "references/persona.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "57815ac933a4921a"
+  },
+  {
+   "name": "invoice-exception-review",
+   "source": "skills/finance/invoice-exception-review",
+   "category": "finance",
+   "description_chars": 993,
+   "headroom": 31,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "1e9b686e30499917"
+  },
+  {
+   "name": "job-description-drafter",
+   "source": "skills/hr-people/job-description-drafter",
+   "category": "hr-people",
+   "description_chars": 755,
+   "headroom": 269,
+   "reference_files": [
+    "references/inclusive-language-checklist.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "d2b753ce9acc165c"
+  },
+  {
+   "name": "knowledge-article-drafter",
+   "source": "skills/it-operations/knowledge-article-drafter",
+   "category": "it-operations",
+   "description_chars": 996,
+   "headroom": 28,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "7b2d291c0b068dc6"
+  },
+  {
+   "name": "knowledge-base-hygiene-review",
+   "source": "skills/it-operations/knowledge-base-hygiene-review",
+   "category": "it-operations",
+   "description_chars": 889,
+   "headroom": 135,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "98dd9505c124eea7"
+  },
+  {
+   "name": "kpi-definition-sheet",
+   "source": "skills/data-analytics/kpi-definition-sheet",
+   "category": "data-analytics",
+   "description_chars": 854,
+   "headroom": 170,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "2cbf3b0b927d90f4"
+  },
+  {
+   "name": "kpi-weekly-report-writer",
+   "source": "skills/reporting-analysis/kpi-weekly-report-writer",
+   "category": "reporting-analysis",
+   "description_chars": 832,
+   "headroom": 192,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "470d3289f6ed5d85"
+  },
+  {
+   "name": "lead-qualification-scorer",
+   "source": "skills/sales-bd/lead-qualification-scorer",
+   "category": "sales-bd",
+   "description_chars": 889,
+   "headroom": 135,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "e3946b7703b02447"
+  },
+  {
+   "name": "lessons-learned-synthesis",
+   "source": "skills/project-management/lessons-learned-synthesis",
+   "category": "project-management",
+   "description_chars": 835,
+   "headroom": 189,
+   "reference_files": [
+    "references/theme-codebook.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "77c389e044ae175d"
+  },
+  {
+   "name": "management-of-change-intake",
+   "source": "skills/engineering-document-control/management-of-change-intake",
+   "category": "engineering-document-control",
+   "description_chars": 933,
+   "headroom": 91,
+   "reference_files": [
+    "references/moc-intake-defaults.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "76c6684b183ed052"
+  },
+  {
+   "name": "master-document-register-check",
+   "source": "skills/engineering-document-control/master-document-register-check",
+   "category": "engineering-document-control",
+   "description_chars": 667,
+   "headroom": 357,
+   "reference_files": [
+    "references/register-tests.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "35865652ca6434c7"
+  },
+  {
+   "name": "meeting-minutes-writer",
+   "source": "skills/meetings/meeting-minutes-writer",
+   "category": "meetings",
+   "description_chars": 943,
+   "headroom": 81,
+   "reference_files": [
+    "references/minutes-template.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "e84572dd97c44333"
+  },
+  {
+   "name": "meeting-prep-onepager",
+   "source": "skills/meetings/meeting-prep-onepager",
+   "category": "meetings",
+   "description_chars": 665,
+   "headroom": 359,
+   "reference_files": [
+    "references/example-brief.md",
+    "references/onepager-template.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "cd38471b89ef3ca2"
+  },
+  {
+   "name": "message-house-builder",
+   "source": "skills/marketing-communications/message-house-builder",
+   "category": "marketing-communications",
+   "description_chars": 782,
+   "headroom": 242,
+   "reference_files": [
+    "references/message-house-structure-and-proof-grades.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "9792b9cb5723af87"
+  },
+  {
+   "name": "month-end-close-checklist",
+   "source": "skills/finance/month-end-close-checklist",
+   "category": "finance",
+   "description_chars": 781,
+   "headroom": 243,
+   "reference_files": [
+    "references/close-task-families.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "52ad83b8dca9b8bf"
+  },
+  {
+   "name": "nda-triage",
+   "source": "skills/legal-contracts/nda-triage",
+   "category": "legal-contracts",
+   "description_chars": 891,
+   "headroom": 133,
+   "reference_files": [
+    "references/nda-standard-positions-template.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "5b6aa2cfaa7525d1"
+  },
+  {
+   "name": "news-monitor-digest",
+   "source": "skills/reporting-analysis/news-monitor-digest",
+   "category": "reporting-analysis",
+   "description_chars": 604,
+   "headroom": 420,
+   "reference_files": [
+    "references/sources.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "b79619dd2e1e0038"
+  },
+  {
+   "name": "no-delete-guardrail",
+   "source": "skills/meta-skills/no-delete-guardrail",
+   "category": "meta-skills",
+   "description_chars": 863,
+   "headroom": 161,
+   "reference_files": [
+    "references/change-journal-template.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "a100f6017866bdbc"
+  },
+  {
+   "name": "nonconformance-report-drafter",
+   "source": "skills/quality-audit/nonconformance-report-drafter",
+   "category": "quality-audit",
+   "description_chars": 707,
+   "headroom": 317,
+   "reference_files": [
+    "references/ncr-structure.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "6fb4c20b2923207f"
+  },
+  {
+   "name": "onboarding-plan-builder",
+   "source": "skills/hr-people/onboarding-plan-builder",
+   "category": "hr-people",
+   "description_chars": 822,
+   "headroom": 202,
+   "reference_files": [
+    "references/plan-structure-and-defaults.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "4db760987673f477"
+  },
+  {
+   "name": "performance-review-drafter",
+   "source": "skills/hr-people/performance-review-drafter",
+   "category": "hr-people",
+   "description_chars": 890,
+   "headroom": 134,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "28d26d9735708333"
+  },
+  {
+   "name": "pfd-intake-and-extraction",
+   "source": "skills/engineering-pfd-to-pid/pfd-intake-and-extraction",
+   "category": "engineering-pfd-to-pid",
+   "description_chars": 783,
+   "headroom": 241,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "51fb6d85244fcb5d"
+  },
+  {
+   "name": "pid-tool-readiness-mapping",
+   "source": "skills/engineering-pfd-to-pid/pid-tool-readiness-mapping",
+   "category": "engineering-pfd-to-pid",
+   "description_chars": 925,
+   "headroom": 99,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "fa1a2a48e29fb03b"
+  },
+  {
+   "name": "piping-enrichment",
+   "source": "skills/engineering-pfd-to-pid/piping-enrichment",
+   "category": "engineering-pfd-to-pid",
+   "description_chars": 883,
+   "headroom": 141,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "e77479f8320e7e9f"
+  },
+  {
+   "name": "policy-change-briefing",
+   "source": "skills/hr-people/policy-change-briefing",
+   "category": "hr-people",
+   "description_chars": 853,
+   "headroom": 171,
+   "reference_files": [
+    "references/briefing-and-faq-guide.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "54dc0c7cbb805af1"
+  },
+  {
+   "name": "policy-gap-review",
+   "source": "skills/security-grc/policy-gap-review",
+   "category": "security-grc",
+   "description_chars": 950,
+   "headroom": 74,
+   "reference_files": [
+    "references/gap-review-structure.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "14c63780f58203cd"
+  },
+  {
+   "name": "policy-question-answerer",
+   "source": "skills/hr-people/policy-question-answerer",
+   "category": "hr-people",
+   "description_chars": 858,
+   "headroom": 166,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "72fbabf44cf35f6d"
+  },
+  {
+   "name": "process-model-check",
+   "source": "skills/engineering-pfd-to-pid/process-model-check",
+   "category": "engineering-pfd-to-pid",
+   "description_chars": 747,
+   "headroom": 277,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "1c19b8b5fdae648d"
+  },
+  {
+   "name": "process-safety-flags",
+   "source": "skills/engineering-pfd-to-pid/process-safety-flags",
+   "category": "engineering-pfd-to-pid",
+   "description_chars": 977,
+   "headroom": 47,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "175e2d25062648d5"
+  },
+  {
+   "name": "procurement-reviewer",
+   "source": "skills/executive-review/procurement-reviewer",
+   "category": "executive-review",
+   "description_chars": 842,
+   "headroom": 182,
+   "reference_files": [
+    "references/org-profile-template.md",
+    "references/persona.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "dc6c5048282b777b"
+  },
+  {
+   "name": "product-requirements-draft",
+   "source": "skills/product-management/product-requirements-draft",
+   "category": "product-management",
+   "description_chars": 981,
+   "headroom": 43,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "8119d4b5e13da022"
+  },
+  {
+   "name": "project-dashboard-builder",
+   "source": "skills/dashboards-microapps/project-dashboard-builder",
+   "category": "dashboards-microapps",
+   "description_chars": 808,
+   "headroom": 216,
+   "reference_files": [
+    "references/content-mapping.md",
+    "references/dashboard-template.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "fcd084fb85d29cdb"
+  },
+  {
+   "name": "project-status-tracker",
+   "source": "skills/project-management/project-status-tracker",
+   "category": "project-management",
+   "description_chars": 839,
+   "headroom": 185,
+   "reference_files": [
+    "references/file-templates.md",
+    "references/raid-log-template.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "f40cdc848a5a9614"
+  },
+  {
+   "name": "proposal-skeleton",
+   "source": "skills/sales-bd/proposal-skeleton",
+   "category": "sales-bd",
+   "description_chars": 861,
+   "headroom": 163,
+   "reference_files": [
+    "references/proposal-section-defaults.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "de22d4228416e27f"
+  },
+  {
+   "name": "purchase-order-anomaly-review",
+   "source": "skills/procurement/purchase-order-anomaly-review",
+   "category": "procurement",
+   "description_chars": 719,
+   "headroom": 305,
+   "reference_files": [
+    "references/anomaly-patterns.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "0a0ed863d84b74de"
+  },
+  {
+   "name": "raid-log-review",
+   "source": "skills/project-management/raid-log-review",
+   "category": "project-management",
+   "description_chars": 759,
+   "headroom": 265,
+   "reference_files": [
+    "references/review-tests.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "108bd16ff28be904"
+  },
+  {
+   "name": "regulatory-change-impact-note",
+   "source": "skills/legal-contracts/regulatory-change-impact-note",
+   "category": "legal-contracts",
+   "description_chars": 863,
+   "headroom": 161,
+   "reference_files": [
+    "references/obligation-extraction-guide.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "d808b8e33b72337c"
+  },
+  {
+   "name": "release-notes-writer",
+   "source": "skills/product-management/release-notes-writer",
+   "category": "product-management",
+   "description_chars": 987,
+   "headroom": 37,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "f27638a5610f4708"
+  },
+  {
+   "name": "report-attachment-analyzer",
+   "source": "skills/reporting-analysis/report-attachment-analyzer",
+   "category": "reporting-analysis",
+   "description_chars": 696,
+   "headroom": 328,
+   "reference_files": [
+    "references/report-config.md",
+    "references/summary-structure.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "ac97d0b758bc04e8"
+  },
+  {
+   "name": "request-intake-triage",
+   "source": "skills/operations/request-intake-triage",
+   "category": "operations",
+   "description_chars": 773,
+   "headroom": 251,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "4ca74448b5ea73dd"
+  },
+  {
+   "name": "rfp-comparison-pack",
+   "source": "skills/procurement/rfp-comparison-pack",
+   "category": "procurement",
+   "description_chars": 789,
+   "headroom": 235,
+   "reference_files": [
+    "references/comparison-template.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "221b10adaf54b06d"
+  },
+  {
+   "name": "rfp-requirements-pack",
+   "source": "skills/procurement/rfp-requirements-pack",
+   "category": "procurement",
+   "description_chars": 750,
+   "headroom": 274,
+   "reference_files": [
+    "references/requirement-writing-guide.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "947a6c6d4e857755"
+  },
+  {
+   "name": "rfp-response-drafter",
+   "source": "skills/sales-bd/rfp-response-drafter",
+   "category": "sales-bd",
+   "description_chars": 914,
+   "headroom": 110,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "971e9edd1b4c0741"
+  },
+  {
+   "name": "risk-register-update",
+   "source": "skills/security-grc/risk-register-update",
+   "category": "security-grc",
+   "description_chars": 845,
+   "headroom": 179,
+   "reference_files": [
+    "references/update-pack-structure.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "7145a687cf0a0212"
+  },
+  {
+   "name": "runbook-drafter",
+   "source": "skills/it-operations/runbook-drafter",
+   "category": "it-operations",
+   "description_chars": 807,
+   "headroom": 217,
+   "reference_files": [
+    "references/runbook-structure.md",
+    "references/step-extraction-rules.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "7354e4a72cd0a2c1"
+  },
+  {
+   "name": "schedule-slip-explainer",
+   "source": "skills/project-management/schedule-slip-explainer",
+   "category": "project-management",
+   "description_chars": 990,
+   "headroom": 34,
+   "reference_files": [
+    "references/slip-vocabulary.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "58416615d17f7b51"
+  },
+  {
+   "name": "service-catalogue-entry",
+   "source": "skills/it-operations/service-catalogue-entry",
+   "category": "it-operations",
+   "description_chars": 791,
+   "headroom": 233,
+   "reference_files": [
+    "references/entry-fields.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "3fe93a28d05760ad"
+  },
+  {
+   "name": "sharepoint-review-sweeper",
+   "source": "skills/it-operations/sharepoint-review-sweeper",
+   "category": "it-operations",
+   "description_chars": 957,
+   "headroom": 67,
+   "reference_files": [
+    "references/notification-template.md",
+    "references/sweep-config.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "62b663769e82716e"
+  },
+  {
+   "name": "skill-file-reviewer",
+   "source": "skills/meta-skills/skill-file-reviewer",
+   "category": "meta-skills",
+   "description_chars": 949,
+   "headroom": 75,
+   "reference_files": [
+    "references/review-report-template.md",
+    "references/skill-format-rules.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [
+    "description",
+    "body patch 0: the schema ignores unknown keys instead of rejecting them, and the folded scalar is a house form not a platform rule",
+    "body patch 1: the coding surface counts with a terminal, the chat surface with a code interpreter",
+    "references/skill-format-rules.md"
+   ],
+   "sha256": "fbced56c06a4be0f"
+  },
+  {
+   "name": "skills-backup-keeper",
+   "source": "skills/meta-skills/skills-backup-keeper",
+   "category": "meta-skills",
+   "description_chars": 771,
+   "headroom": 253,
+   "reference_files": [
+    "references/backup-manifest-template.md",
+    "references/journal-template.md",
+    "references/restore-checklist.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "7dfd570ed8bb2562"
+  },
+  {
+   "name": "software-request-review",
+   "source": "skills/it-operations/software-request-review",
+   "category": "it-operations",
+   "description_chars": 990,
+   "headroom": 34,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "cbae22149101da00"
+  },
+  {
+   "name": "sop-drafter",
+   "source": "skills/operations/sop-drafter",
+   "category": "operations",
+   "description_chars": 877,
+   "headroom": 147,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "561f79e9f3f955b3"
+  },
+  {
+   "name": "sprint-review-summary",
+   "source": "skills/project-management/sprint-review-summary",
+   "category": "project-management",
+   "description_chars": 869,
+   "headroom": 155,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "8ab8d991faf99616"
+  },
+  {
+   "name": "stakeholder-map-builder",
+   "source": "skills/project-management/stakeholder-map-builder",
+   "category": "project-management",
+   "description_chars": 987,
+   "headroom": 37,
+   "reference_files": [
+    "references/rating-and-stance-rules.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "68076ccbdda2054b"
+  },
+  {
+   "name": "supplier-evaluation-matrix",
+   "source": "skills/procurement/supplier-evaluation-matrix",
+   "category": "procurement",
+   "description_chars": 827,
+   "headroom": 197,
+   "reference_files": [
+    "references/scoring-basis-guide.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "58c9ecfc6970b792"
+  },
+  {
+   "name": "tagging-and-numbering",
+   "source": "skills/engineering-pfd-to-pid/tagging-and-numbering",
+   "category": "engineering-pfd-to-pid",
+   "description_chars": 928,
+   "headroom": 96,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "7519433a37cbae0a"
+  },
+  {
+   "name": "ticket-triage-pack",
+   "source": "skills/customer-support/ticket-triage-pack",
+   "category": "customer-support",
+   "description_chars": 778,
+   "headroom": 246,
+   "reference_files": [
+    "references/triage-defaults.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "51df5a9a4dc3bc14"
+  },
+  {
+   "name": "training-needs-synthesis",
+   "source": "skills/learning-development/training-needs-synthesis",
+   "category": "learning-development",
+   "description_chars": 955,
+   "headroom": 69,
+   "reference_files": [
+    "references/needs-codebook-and-anonymisation.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "3866f62985edf0df"
+  },
+  {
+   "name": "training-quiz-builder",
+   "source": "skills/learning-development/training-quiz-builder",
+   "category": "learning-development",
+   "description_chars": 930,
+   "headroom": 94,
+   "reference_files": [
+    "references/item-writing-rules.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "91395fe759cbdbd8"
+  },
+  {
+   "name": "transcript-to-actions",
+   "source": "skills/meetings/transcript-to-actions",
+   "category": "meetings",
+   "description_chars": 759,
+   "headroom": 265,
+   "reference_files": [
+    "references/actions-template.md",
+    "references/email-template.md",
+    "references/extraction-rules.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "5e25e902029762eb"
+  },
+  {
+   "name": "transmittal-drafter",
+   "source": "skills/engineering-document-control/transmittal-drafter",
+   "category": "engineering-document-control",
+   "description_chars": 675,
+   "headroom": 349,
+   "reference_files": [
+    "references/transmittal-fields.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "0fc2ba93a098123a"
+  },
+  {
+   "name": "user-personas-builder",
+   "source": "skills/product-management/user-personas-builder",
+   "category": "product-management",
+   "description_chars": 925,
+   "headroom": 99,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "6fa9ea30478c1cfb"
+  },
+  {
+   "name": "validation-and-review-package",
+   "source": "skills/engineering-pfd-to-pid/validation-and-review-package",
+   "category": "engineering-pfd-to-pid",
+   "description_chars": 770,
+   "headroom": 254,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "07f62858ef08caaa"
+  },
+  {
+   "name": "vendor-risk-screening-brief",
+   "source": "skills/security-grc/vendor-risk-screening-brief",
+   "category": "security-grc",
+   "description_chars": 925,
+   "headroom": 99,
+   "reference_files": [
+    "references/screening-topics.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "a4535737abcad07f"
+  },
+  {
+   "name": "vendor-security-questionnaire-prefill",
+   "source": "skills/security-grc/vendor-security-questionnaire-prefill",
+   "category": "security-grc",
+   "description_chars": 894,
+   "headroom": 130,
+   "reference_files": [
+    "references/prefill-pack-structure.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "0a3f89d0cec2a630"
+  },
+  {
+   "name": "weekly-status-update-writer",
+   "source": "skills/writing-communication/weekly-status-update-writer",
+   "category": "writing-communication",
+   "description_chars": 749,
+   "headroom": 275,
+   "reference_files": [],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "0046f03041d78c4f"
+  },
+  {
+   "name": "works-council-reviewer",
+   "source": "skills/executive-review/works-council-reviewer",
+   "category": "executive-review",
+   "description_chars": 828,
+   "headroom": 196,
+   "reference_files": [
+    "references/org-profile-template.md",
+    "references/persona.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "b0bb7e308175cbdb"
+  },
+  {
+   "name": "write-like-me",
+   "source": "skills/writing-communication/write-like-me",
+   "category": "writing-communication",
+   "description_chars": 655,
+   "headroom": 369,
+   "reference_files": [
+    "references/voice-profile-template.md"
+   ],
+   "terms_rewritten": [],
+   "overridden": [],
+   "sha256": "89630fcb8fafd8de"
+  }
+ ]
+}

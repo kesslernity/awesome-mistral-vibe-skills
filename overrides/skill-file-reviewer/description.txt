@@ -1,0 +1,11 @@
+Reviews one SKILL.md against the Mistral Vibe skill rules and returns a findings table: front
+matter the loader's own parser and schema accept, name equal to the folder and within 64
+characters, description within the 1,024 character cap, the eight-heading skeleton,
+capability-neutral wording, safety boundaries. Each finding carries severity, rule identifier,
+location, quoted evidence and replacement text; the verdict READY, REVISE or BLOCKED is an
+apparent state and the owner decides. Use when the user asks to "review this SKILL.md", "check my
+skill file before upload", "lint this skill description", "validate the front matter of this
+skill" or "score this skill folder". Do not use to write an agent's instructions field, use
+agent-instructions-drafter instead; for injection or leakage exposures use
+agent-instructions-red-team; for launch tests use agent-evaluation-plan. Drafts for human review;
+never approves, authorises or signs off.

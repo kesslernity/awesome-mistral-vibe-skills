@@ -1,0 +1,12 @@
+[
+ {
+  "why": "the schema ignores unknown keys instead of rejecting them, and the folded scalar is a house form not a platform rule",
+  "old": "2. Front matter (FM rules). Delimiter lines alone on their lines, nothing before the first; exactly two keys, name then description; name 1 to 64 characters, lowercase letters, digits and single hyphens, equal to the folder name; description as a folded block scalar, 40 to 1,024 characters after folding; none of the strict-parse hazards the rule set lists. Quote the offending line.",
+  "new": "2. Loader and front matter (LD and FM rules). Folder one level under a skills directory, name unique across the search paths in use, no collision with a built-in skill. Delimiter lines of three or more hyphens alone on their lines, nothing at all before the first; every key one the schema reads, name and description present; name 1 to 64 characters, lowercase letters, digits and single hyphens, equal to the folder name; description 40 to 1,024 characters after folding, the folded block scalar being the house form; none of the strict-parse hazards the rule set lists. Quote the offending line. Record that a failure here is silent: the skill does not load and nothing is printed."
+ },
+ {
+  "why": "the coding surface counts with a terminal, the chat surface with a code interpreter",
+  "old": "8. Counting method. If this agent has a code-interpreter capability enabled, count with it and write \"counted\".",
+  "new": "8. Counting method. If this agent has a code-interpreter or terminal capability enabled, count with it and write \"counted\"."
+ }
+]
