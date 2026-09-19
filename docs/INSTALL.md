@@ -61,7 +61,9 @@ python3 tools/verify.py ~/.vibe/skills  # or whichever directory you installed i
 
 `verify.py` runs Mistral's own `SkillMetadata` schema when `mistral-vibe` is importable, and a mirror of it when it is not. It tells you which one it used.
 
-## Four things that fail quietly
+## Five things that fail quietly
+
+**A project install only loads in a trusted folder.** `.agents/skills` and `.vibe/skills` inside a repository are read only once Vibe has recorded the working directory, or one of its ancestors, as trusted in `~/.vibe/trusted_folders.toml`. The trust dialog appears at startup when the folder has something worth trusting in it, and never in your home directory. Answer no once and the answer is kept: the skills sit on disk, the folder sits in the untrusted list, and nothing on screen connects the two. `~/.vibe/skills` has no such gate, which is the reason to start there while you are testing.
 
 **Discovery does not recurse.** Vibe lists the children of a skills directory and looks for `<child>/SKILL.md`. One level, no deeper. Keeping the category folders would hide all 137, with no message. This is the single reason the published layout is flat.
 
