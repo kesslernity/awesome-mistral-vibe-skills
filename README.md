@@ -55,11 +55,11 @@ Each one is read from the loader's own source, not from documentation.
 
 **Discovery is one level deep.** It lists the children of a skills directory and looks for `<child>/SKILL.md`. It does not recurse. A tidy `skills/finance/invoice-exception-review/` hides the skill completely, and hides it silently. Flat, or nothing.
 
-**The description cap is 1,024 characters, and there is nothing past it.** The schema declares `max_length=1024`. Exactly 1,024 passes; 1,025 fails validation and the whole skill disappears. Discovery loads the name and the description only, so the description is also the entire routing decision: nothing in the body can rescue a description that never says when to use the skill. The tightest description here sits <!-- tightest-headroom:start -->28<!-- tightest-headroom:end --> characters short of the cap, in `<!-- tightest-skill:start -->knowledge-article-drafter<!-- tightest-skill:end -->`. `tools/verify.py` warns below 50.
+**The description cap is 1,024 characters, and there is nothing past it.** The schema declares `max_length=1024`. Exactly 1,024 passes; 1,025 fails validation and the whole skill disappears. Discovery injects three fields per skill into the system prompt, the name, the description and the path. The description is the only one of the three that can say when to use the skill, and the body is not loaded until the `skill` tool calls it, so nothing below the front matter can rescue a description that never states its trigger. The tightest description here sits <!-- tightest-headroom:start -->28<!-- tightest-headroom:end --> characters short of the cap, in `<!-- tightest-skill:start -->knowledge-article-drafter<!-- tightest-skill:end -->`. `tools/verify.py` warns below 50.
 
 **A name that does not match its folder is a warning, not an error.** The skill still loads, under the name in the front matter. So the slash command is not the folder you are looking at, and the only sign is a log line.
 
-**Unknown front matter keys are ignored, not rejected.** The schema reads `name`, `description`, `license`, `compatibility`, `metadata`, `allowed-tools` and `user-invocable`. Anything else is dropped without complaint, so a misspelled key is not an error, it is text the agent never sees.
+**Unknown front matter keys are ignored, not rejected.** The schema reads `name`, `description`, `license`, `compatibility`, `metadata`, `allowed-tools`, `user-invocable` and `disable-model-invocation`. Anything else is dropped without complaint, so a misspelled key is not an error, it is text the agent never sees. Two of those keys decide whether anyone can reach the skill at all: `user-invocable: false` hides it from the slash menu, and `disable-model-invocation: true` removes it from the routing block, so the model never sees it and only an explicit `/name` reaches it.
 
 **There is no global vendor-neutral path.** `.agents/skills` is read inside a project. The user-level directory is `~/.vibe/skills`. Installing to `~/.agents/skills` and expecting it to work everywhere is a quiet no-op.
 
@@ -69,7 +69,7 @@ Each one is read from the loader's own source, not from documentation.
 python3 tools/verify.py            # the skills in this repository
 python3 tools/verify.py DIR ...    # any other skills directory
 python3 tools/verify.py --house    # plus this repository's own conventions
-python3 tools/selftest.py          # 21 cases that prove the checker rejects what it claims to
+python3 tools/selftest.py          # 24 cases that prove the checker rejects what it claims to
 ```
 
 `verify.py` reproduces the loader's steps rather than approximating them: the same front matter boundary regular expression, the same YAML parse, the same schema. With `mistral-vibe` installed it imports the real `SkillMetadata` and validates against that; without it, a mirror of the same constraints, and it says which one ran. It reports missing reference files, duplicate names across search paths, collisions with built-in skill names, category folders that hide their contents, sync conflict copies left beside a reference file, and descriptions running out of headroom. `--house` adds this repository's own rules: the draft closer, a "Use when" clause, no em or en dashes. Failures exit 1. Warnings do not.

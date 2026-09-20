@@ -29,9 +29,9 @@ files against another runtime's rules. Four differences make that wrong rather t
 imprecise:
 
 1. **Unknown front matter keys are ignored, not rejected.** The schema reads `name`,
-   `description`, `license`, `compatibility`, `metadata`, `allowed-tools` and `user-invocable`.
-   Anything else is dropped without complaint, so "exactly two keys" is a house rule here, and
-   an extra key is dead text rather than a failed upload.
+   `description`, `license`, `compatibility`, `metadata`, `allowed-tools`, `user-invocable` and
+   `disable-model-invocation`. Anything else is dropped without complaint, so "exactly two keys"
+   is a house rule here, and an extra key is dead text rather than a failed upload.
 2. **A name that does not match its folder is a warning, not a rejection.** The skill loads
    under the front matter name, so the slash command is not the folder the author is looking at.
 3. **Discovery is one level deep.** A category folder between the skills directory and the skill

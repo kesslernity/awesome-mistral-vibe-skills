@@ -62,6 +62,19 @@ WARN = {
                       "collides with a built-in"),
 }
 
+# Keys the schema really does read. A warning here would be a false alarm, and
+# the checker's key set is the thing most likely to fall behind the runtime:
+# disable-model-invocation was read by SkillMetadata before it was listed here,
+# so a correct file was being told its text never reaches the agent.
+QUIET = {
+    "model-only": {"SKILL.md": "---\nname: model-only\ndescription: a description\n"
+                               "disable-model-invocation: true\n---\nbody\n"},
+    "not-user-invocable": {"SKILL.md": "---\nname: not-user-invocable\ndescription: a description\n"
+                                       "user-invocable: false\n---\nbody\n"},
+    "declared-tools": {"SKILL.md": "---\nname: declared-tools\ndescription: a description\n"
+                                   "allowed-tools: bash read\n---\nbody\n"},
+}
+
 
 # each fails only with --house, and must pass without it
 HOUSE = {
@@ -114,6 +127,12 @@ def main():
         if r["failures"]:
             bad.append(f"{name}: should warn, not fail: {r['failures']}")
 
+    for name, files in QUIET.items():
+        r = run(case({name: files}))
+        noise = [m for _, m in r["warnings"] if "not read by the schema" in m]
+        if noise or r["failures"]:
+            bad.append(f"{name}: a key the schema reads must be silent, got {r['failures']} {noise}")
+
     for name, (files, expect) in HOUSE.items():
         base = case({name: files})
         r = run(base, "--house")
@@ -142,7 +161,7 @@ def main():
 
     for line in bad:
         print(f"  FAIL  {line}")
-    total = 1 + len(BAD) + len(WARN) + 2 * len(HOUSE) + 2
+    total = 1 + len(BAD) + len(WARN) + len(QUIET) + 2 * len(HOUSE) + 2
     print(f"\n{total - len(bad)}/{total} cases behave as stated")
     return 1 if bad else 0
 

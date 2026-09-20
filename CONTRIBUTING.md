@@ -58,7 +58,7 @@ Three things are not style preferences and a pull request that breaks them will 
 - **Missing data is named UNKNOWN**, never filled in with a plausible value.
 - **Nothing is a safety authorisation.** No permit to work, isolation, confined space entry, job safety analysis, incident classification or inspection sign-off. AI prepares, a qualified human decides.
 
-Also: no em dashes, and descriptions state when to use the skill and when not to, because the description is the whole routing decision.
+Also: no em dashes, and descriptions state when to use the skill and when not to, because the description is the only part of the file the model sees before deciding to load it.
 
 ## Licence
 

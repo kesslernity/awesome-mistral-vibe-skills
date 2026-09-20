@@ -30,8 +30,8 @@ except ImportError:
 FM_BOUNDARY = re.compile(r"^-{3,}\s*$", re.MULTILINE)   # vibe/core/skills/parser.py
 NAME_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")       # vibe/core/skills/models.py
 NAME_MAX, DESC_MAX, COMPAT_MAX = 64, 1024, 500
-SCHEMA_KEYS = {"name", "description", "license", "compatibility",
-               "metadata", "allowed-tools", "user-invocable"}
+SCHEMA_KEYS = {"name", "description", "license", "compatibility", "metadata",
+               "allowed-tools", "user-invocable", "disable-model-invocation"}
 REF_LINE = re.compile(r"references/[A-Za-z0-9_-]+(?:\.[A-Za-z0-9]+)+")  # stops before sentence punctuation
 
 # Built-in skill names that ship with the hosted work surface. A local skill of
@@ -148,8 +148,8 @@ def check_dir(base, headroom_at, validate, house=False):
                                         "is a draft a human still decides on"))
             if "Use when" not in desc:
                 failures.append((where, "house rule: the description must say when to use the "
-                                        "skill; discovery loads the description only, so nothing "
-                                        "in the body can route the skill"))
+                                        "skill; the body is not loaded until the skill tool "
+                                        "calls it, so nothing in it can route the skill"))
             for rel, text in [("SKILL.md", raw)] + [
                     (str(r.relative_to(skill_dir)), r.read_text(encoding="utf-8"))
                     for r in sorted(skill_dir.rglob("*")) if r.is_file() and r.name != "SKILL.md"]:

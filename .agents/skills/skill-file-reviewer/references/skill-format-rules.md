@@ -37,7 +37,7 @@ These are not style rules. They are the behaviour a reviewer has to assume.
 | ID | Passes when | Fails as | Replacement pattern |
 |---|---|---|---|
 | FM-01 | The file opens with a delimiter line of three or more hyphens and a second such line closes the block, each alone on its line, nothing at all before the first | Blocker (platform) | Add the delimiters; delete anything above the first one, including a blank line or a byte-order mark |
-| FM-02 | Every key present is one the schema reads: `name`, `description`, `license`, `compatibility`, `metadata`, `allowed-tools`, `user-invocable` | Minor (platform) | Remove the key or move its content into the body. An unrecognised key is not rejected, it is silently ignored, so text placed there never reaches the agent |
+| FM-02 | Every key present is one the schema reads: `name`, `description`, `license`, `compatibility`, `metadata`, `allowed-tools`, `user-invocable`, `disable-model-invocation` | Minor (platform) | Remove the key or move its content into the body. An unrecognised key is not rejected, it is silently ignored, so text placed there never reaches the agent |
 | FM-03 | `name` is 1 to 64 characters and matches lowercase a to z and 0 to 9 in hyphen-separated groups, with no leading, trailing or doubled hyphen | Blocker (platform) | Propose the kebab-case form |
 | FM-04 | `name` equals the folder name (UNKNOWN when the folder is not given) | Major (platform) | Rename one to match; say which. A mismatch is only a warning: the skill still loads, but under the front matter name, so the slash command is not the folder the user is looking at |
 | FM-05 | `description` is a folded block scalar written `description: >-` with the text indented below it | Advisory (repo) | Convert to the folded form, two-space indent. Any valid YAML scalar loads; the folded form is what keeps the diff readable |
@@ -68,7 +68,7 @@ Not a hazard here, though it is on some other runtimes: a line of three or more 
 | TR-04 | Ends with "Drafts for human review; never approves, authorises or signs off." | Major | Append the sentence |
 | TR-05 | No trigger phrase is shared with a sibling without a distinguishing clause (skipped when no siblings are supplied) | Minor | Add the clause, or a question the agent asks the user |
 
-The description carries the whole routing decision. Discovery loads the name and the description only, so nothing in the body can rescue a description that does not say when to use the skill.
+The description carries the routing decision. Discovery injects the name, the description and the path into the system prompt, and the description is the only one of the three that can say when to use the skill. The body is not loaded until the skill tool calls it, so nothing in it can rescue a description that does not state its trigger.
 
 ## SK: skeleton (repo)
 
