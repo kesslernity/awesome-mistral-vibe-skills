@@ -1,4 +1,4 @@
-Reviews one SKILL.md against the Mistral Vibe CLI skill rules and returns a findings table: front
+Reviews one SKILL.md against the Mistral Vibe skill rules and returns a findings table: front
 matter the loader's own parser and schema accept, name equal to the folder and within 64
 characters, description within the 1,024 character cap, the eight-heading skeleton,
 capability-neutral wording, safety boundaries. Each finding carries severity, rule identifier,

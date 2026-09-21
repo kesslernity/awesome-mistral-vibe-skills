@@ -1508,8 +1508,8 @@
    "name": "skill-file-reviewer",
    "source": "skills/meta-skills/skill-file-reviewer",
    "category": "meta-skills",
-   "description_chars": 953,
-   "headroom": 71,
+   "description_chars": 949,
+   "headroom": 75,
    "reference_files": [
     "references/review-report-template.md",
     "references/skill-format-rules.md"
@@ -1521,7 +1521,7 @@
     "body patch 1: the coding surface counts with a terminal, the chat surface with a code interpreter",
     "references/skill-format-rules.md"
    ],
-   "sha256": "37a1ccefd2a09b85"
+   "sha256": "fbced56c06a4be0f"
   },
   {
    "name": "skills-backup-keeper",
