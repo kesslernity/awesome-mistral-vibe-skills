@@ -1,6 +1,6 @@
 # Skill format rules
 
-The rule set the skill-file-reviewer applies by default. Each rule has an identifier, the condition that passes, the default severity when it fails, and the replacement pattern to propose. The rules describe one skill folder for Mistral Vibe: one SKILL.md with YAML front matter and a fixed body skeleton, optionally with a references folder beside it. A user may add rules; a user rule never removes a rule in the SB group.
+The rule set the skill-file-reviewer applies by default. Each rule has an identifier, the condition that passes, the default severity when it fails, and the replacement pattern to propose. The rules describe one skill folder for Mistral Vibe CLI: one SKILL.md with YAML front matter and a fixed body skeleton, optionally with a references folder beside it. A user may add rules; a user rule never removes a rule in the SB group.
 
 Rules marked "platform" describe what the runtime itself does with the file. Rules marked "repo" are this repository's house rules; a user may switch them off.
 

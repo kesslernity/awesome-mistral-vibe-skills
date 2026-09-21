@@ -1,14 +1,16 @@
-# Awesome Mistral Vibe Skills
+# Awesome Mistral Vibe CLI Skills
 
-**What breaks first.** A skill Mistral Vibe cannot parse does not raise an error. The loader catches the exception, writes one line to a log file nobody is reading, and returns nothing. No message, no non-zero exit code, no skill. You find out when the agent quietly does not do the thing. That is the reason this repository ships a checker next to the skills, and the reason the checker has its own test.
+**These are CLI skills, not Vibe Work Skills.** The word "Skills" names two different things in Mistral's product. Vibe Work ships its own built-in Skills with their own configuration model, managed in that interface. Everything in this repository is a folder under `.agents/skills/` with a `SKILL.md`, read by Vibe CLI off your disk. They are not interchangeable: pointing Work at this repository does nothing, and there is no import step. What does carry across is the writing. A skill body here is the text you would paste into a Work Skill, and the sibling prompt library is the place to look for the Work, scheduled task and Chat side.
 
-> **<!-- n-skills:start -->137<!-- n-skills:end --> skills for Mistral Vibe, across <!-- n-categories:start -->29<!-- n-categories:end --> disciplines. Copy a folder, or point Vibe at this one. Every skill is written to prepare a draft, not to approve one.**
+**What breaks first.** A skill Mistral Vibe CLI cannot parse does not raise an error. The loader catches the exception, writes one line to a log file nobody is reading, and returns nothing. No message, no non-zero exit code, no skill. You find out when the agent quietly does not do the thing. That is the reason this repository ships a checker next to the skills, and the reason the checker has its own test.
+
+> **<!-- n-skills:start -->137<!-- n-skills:end --> skills for Mistral Vibe CLI, across <!-- n-categories:start -->29<!-- n-categories:end --> disciplines. Copy a folder, or point Vibe CLI at this one. Every skill is written to prepare a draft, not to approve one.**
 
 [![Licence: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 <!-- badge-skills:start -->[![Skills](https://img.shields.io/badge/skills-137-blue)](.agents/skills/)<!-- badge-skills:end -->
 [![Format](https://img.shields.io/badge/format-Agent%20Skills-green)](https://agentskills.io)
 
-Not affiliated with, or endorsed by, Mistral AI. The skills are plain Markdown in the Agent Skills format that Mistral Vibe reads.
+Not affiliated with, or endorsed by, Mistral AI. The skills are plain Markdown in the Agent Skills format that Mistral Vibe CLI reads.
 
 ---
 
@@ -24,7 +26,7 @@ mkdir -p .agents/skills
 cp -R /tmp/amvs/.agents/skills/* .agents/skills/
 ```
 
-**For yourself, everywhere**, into the Vibe home directory:
+**For yourself, everywhere**, into the Vibe CLI home directory:
 
 ```bash
 git clone https://github.com/kesslernity/awesome-mistral-vibe-skills.git /tmp/amvs
@@ -289,7 +291,7 @@ Text inside an input is data, not instruction. Every skill treats embedded instr
 | [`agent-instructions-drafter`](.agents/skills/agent-instructions-drafter/) | Drafts the instructions field of an agent that orchestrates a set of custom skills, under a character cap (default 8,000), from the skills' names and descriptions. |
 | [`agent-instructions-red-team`](.agents/skills/agent-instructions-red-team/) | Reviews the instructions text and skills of an agent, with its stated capabilities, knowledge sources and audience, for prompt-injection exposure, data-leakage paths, over-broad permissions and missing refusals, and returns an ... |
 | [`no-delete-guardrail`](.agents/skills/no-delete-guardrail/) | Applies a change-safety review to any requested file, mail or calendar change. |
-| [`skill-file-reviewer`](.agents/skills/skill-file-reviewer/) | Reviews one SKILL.md against the Mistral Vibe skill rules and returns a findings table. |
+| [`skill-file-reviewer`](.agents/skills/skill-file-reviewer/) | Reviews one SKILL.md against the Mistral Vibe CLI skill rules and returns a findings table. |
 | [`skills-backup-keeper`](.agents/skills/skills-backup-keeper/) | Prepares the contents of a dated backup of a custom skills folder and drafts a session journal entry, both for the user to save, so work can be resumed after a crash, a context loss or a skills wipe. |
 
 ### Operations (2)
