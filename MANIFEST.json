@@ -2,7 +2,7 @@
  "generated_from": {
   "repository": "kesslernity/awesome-copilot-agent-skills",
   "path": "/Users/mathieukessler/Desktop/kesslernity/awesome-copilot-agent-skills",
-  "commit": "179c7c97b6c358f437d7379833274b40bca9db9a"
+  "commit": "4182785ea52aa950295cbab46d96044030d13c16"
  },
  "generator": "tools/generate.py",
  "term_map": {
@@ -1521,7 +1521,7 @@
     "body patch 1: the coding surface counts with a terminal, the chat surface with a code interpreter",
     "references/skill-format-rules.md"
    ],
-   "sha256": "fbced56c06a4be0f"
+   "sha256": "ed99ec082320cf2e"
   },
   {
    "name": "skills-backup-keeper",

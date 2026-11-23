@@ -1,6 +1,6 @@
 # Installing
 
-Three places Mistral Vibe looks, and one that it does not.
+Three places Mistral Vibe CLI 2.5.0 looks, and one it does not: `~/.agents/skills`, which Vibe reads from 2.11.0 on.
 
 ## Project: `.agents/skills/`
 
@@ -39,9 +39,9 @@ skill_paths = ["/path/to/awesome-mistral-vibe-skills/.agents/skills"]
 
 `skill_paths` is searched **first**, ahead of the project and user directories, which matters for the duplicate rule below.
 
-## Chat, where there is no filesystem
+## The web interface
 
-Open the skills panel, create a skill, fill the three fields: title, description, and the SKILL.md body. There is no folder and no reference files, so a skill that reads `references/<file>.md` needs that content pasted into the body or dropped in as an attachment.
+Open `Context` > `Skills` and click `New Skill`: title, description, and the SKILL.md body. Mistral's documentation says files or folders can be added alongside the skill in that form. If you paste the body alone, a skill that reads `references/<file>.md` needs that content pasted into the body or dropped in as an attachment.
 
 ## Selecting a subset
 
@@ -72,11 +72,11 @@ python3 tools/verify.py ~/.vibe/skills  # or whichever directory you installed i
 .agents/skills/finance/invoice-exception-review/SKILL.md  invisible
 ```
 
-**A skill that fails to parse produces nothing, not an error.** The loader catches the exception, logs a warning, and returns `None`. No screen output, no non-zero exit code. Run `verify.py` before you trust an install.
+**In Vibe CLI 2.5.0 a skill that fails to parse produces nothing, not an error.** The loader catches the exception, logs a warning, and returns `None`. No screen output, no non-zero exit code. Mistral's release notes say later versions report it: a toast since 2.14.0, and in 3.1.4 the `/skills` command lists the skills that failed to load. Run `verify.py` before you trust an install, on any version.
 
-**Descriptions are capped at 1,024 characters, and the cap is hard.** At 1,025 validation fails and the skill vanishes by the rule above. Discovery loads the name and description only, so the description is also the entire routing decision: the body cannot rescue a description that never says when to use the skill.
+**Descriptions are capped at 1,024 characters, and the cap is hard.** At 1,025 validation fails and the skill is dropped by the rule above. Discovery loads the name and description only, so the description is also the entire routing decision: the body cannot rescue a description that never says when to use the skill.
 
-**`~/.agents/skills` is not read.** `.agents/skills` is a project path. The user-level directory is `~/.vibe/skills`. Installing to `~/.agents/skills` looks right, does nothing, and says nothing.
+**In 2.5.0 `~/.agents/skills` is not read.** `.agents/skills` is a project path. The user-level directory is `~/.vibe/skills`. On that version, installing to `~/.agents/skills` looks right, does nothing, and says nothing. Mistral's release notes say Vibe loads skills from `~/.agents/skills` since 2.11.0.
 
 ## Two more worth knowing
 

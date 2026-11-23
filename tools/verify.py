@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 """Verify a skills directory the way Mistral Vibe loads it.
 
-Why this exists. The loader catches every exception a skill file can raise,
-writes one warning to its log, and returns nothing. A malformed skill produces
-no message on screen and no non-zero exit code. It is simply not in the list,
-and the first sign of trouble is an agent that quietly does not do the thing.
+Why this exists. The Vibe CLI 2.5.0 loader catches every exception a skill
+file can raise, writes one warning to its log, and returns nothing. There, a
+malformed skill produces no message on screen and no non-zero exit code. It is
+simply not in the list, and the first sign of trouble is an agent that quietly
+does not do the thing. Mistral's release notes add a toast for a
+file that fails to parse in 2.14.0; the 3.1.4 source still records nothing for a
+skill nested one folder too deep.
 So the check has to happen before the skill ships, not after it fails.
 
-The script reproduces the loader's own steps rather than approximating them:
+The script reproduces the 2.5.0 loader's own steps rather than approximating them:
 the same front matter boundary regex, the same YAML parse, the same schema.
 When mistral-vibe is installed it imports the real SkillMetadata and validates
 against that. When it is not, it falls back to a mirror of the same constraints

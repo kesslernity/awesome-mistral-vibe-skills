@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Check the checker.
 
-tools/verify.py exists because the runtime fails silently. A verifier that also
-fails silently would be worse than none, so every rule it claims to enforce gets
+tools/verify.py exists because the Vibe CLI 2.5.0 loader fails silently. A
+verifier that also fails silently would be worse than none, so every rule it claims to enforce gets
 a deliberately broken skill here and has to reject it. The test also builds one
 correct skill and requires a clean pass, so a verifier that rejected everything
 would not survive either.

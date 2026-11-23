@@ -37,9 +37,11 @@ imprecise:
 3. **Discovery is one level deep.** A category folder between the skills directory and the skill
    hides every skill inside it. That belongs in the rule set, because it is the single most
    likely reason a correct file does not appear.
-4. **Failure is silent.** The loader catches the exception, logs a warning and returns nothing.
-   No error on screen, no non-zero exit code, no skill. A reviewer who assumes the runtime will
-   complain is reviewing for a runtime that complains.
+4. **In Vibe CLI 2.5.0, failure is silent.** The loader catches the exception, logs a warning
+   and returns nothing. No error on screen, no non-zero exit code, no skill. Mistral's release
+   notes say later versions report a file that fails to parse, and the 3.1.4 source still
+   records nothing for a skill nested one folder too deep. A reviewer who assumes the runtime
+   will complain is reviewing for a runtime that complains.
 
 The override therefore supplies a rewritten `references/skill-format-rules.md` with an `LD` group
 for loader behaviour, revised `FM` severities, a `CN-08` rule for the terminal-versus-chat split,

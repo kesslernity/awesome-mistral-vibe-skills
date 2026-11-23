@@ -48,7 +48,7 @@ The last one is the common case. It means the upstream body was reworded and the
 
 ## If you add a rule to the checker
 
-Add the case to `tools/selftest.py` in the same commit. It builds a deliberately broken skill per rule and asserts `verify.py` rejects it, plus one correct skill it must pass. A checker with no failing case is a checker nobody has proven runs, which on a runtime that fails silently is worse than no checker at all.
+Add the case to `tools/selftest.py` in the same commit. It builds a deliberately broken skill per rule and asserts `verify.py` rejects it, plus one correct skill it must pass. A checker with no failing case is a checker nobody has proven runs, which is worse than no checker at all when the failures it exists for are the silent ones.
 
 ## House rules the text keeps
 

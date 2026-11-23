@@ -2,11 +2,11 @@
 
 The rule set the skill-file-reviewer applies by default. Each rule has an identifier, the condition that passes, the default severity when it fails, and the replacement pattern to propose. The rules describe one skill folder for Mistral Vibe: one SKILL.md with YAML front matter and a fixed body skeleton, optionally with a references folder beside it. A user may add rules; a user rule never removes a rule in the SB group.
 
-Rules marked "platform" describe what the runtime itself does with the file, and were read from the Vibe CLI loader, which is the surface whose parser and schema can be inspected. The web interface reads the same Agent Skills format. Rules marked "repo" are this repository's house rules; a user may switch them off.
+Rules marked "platform" describe what the runtime itself does with the file, and were read from the Vibe CLI 2.5.0 loader, which is the surface whose parser and schema can be inspected. The web interface reads the same Agent Skills format. Rules marked "repo" are this repository's house rules; a user may switch them off.
 
 ## Severity scale
 
-- Blocker: the skill does not load, or the agent misfires when the skill is picked. Note the failure mode: the loader catches a parse or validation error, writes one line to its log, and returns nothing. There is no error on screen and no non-zero exit code. A blocked skill does not announce itself; it is simply absent from the list.
+- Blocker: the skill does not load, or the agent misfires when the skill is picked. Note the failure mode in Vibe CLI 2.5.0: the loader catches a parse or validation error, writes one line to its log, and returns nothing. There is no error on screen and no non-zero exit code. A blocked skill does not announce itself; it is simply absent from the list. Mistral's release notes say later versions report a file that fails to parse, and the 3.1.4 source still records nothing for a skill nested one folder too deep, so a reviewer does not count on a report.
 - Major: the skill loads but breaks a repository rule or a safety boundary.
 - Minor: quality of trigger, length or style.
 - Advisory: a suggestion, or a heuristic check that can be wrong (spelling variant, proper nouns).
@@ -30,7 +30,7 @@ These are not style rules. They are the behaviour a reviewer has to assume.
 | LD-01 | The folder sits one level under a skills directory, as `<skills-dir>/<name>/SKILL.md` | Blocker | Flatten. Discovery iterates the skills directory and looks for `<child>/SKILL.md`; it does not recurse, so a category folder hides every skill inside it |
 | LD-02 | The skill name is unique across every search path in use | Major | Rename. Search paths are read in order and the first definition of a name wins; a later copy is dropped with only a debug line |
 | LD-03 | The name does not collide with a built-in skill of the host | Major | Rename and say which built-in it collided with |
-| LD-04 | Nothing in the folder depends on an error being shown to the user when the file is wrong | Blocker | Remove the assumption. A broken skill produces no message and no exit code; validate the folder with a checker before shipping it |
+| LD-04 | Nothing in the folder depends on an error being shown to the user when the file is wrong | Blocker | Remove the assumption. In Vibe CLI 2.5.0 a broken skill produces no message and no exit code, and the 3.1.4 source still records nothing for a skill nested too deep; validate the folder with a checker before shipping it |
 
 ## FM: front matter
 
